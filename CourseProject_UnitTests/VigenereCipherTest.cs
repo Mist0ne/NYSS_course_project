@@ -70,5 +70,9 @@ namespace CourseProject_UnitTests
             resultWithUpperPhrase = classObject.Encrypt(secondDecodedStringWithCharacters, codePhrase.ToUpper());
             Assert.AreEqual(resultWithUpperPhrase, expectedStringAfterSecondEncoding, $"Uppercase translation caused an error in test 2 (string with characters)\n\nExpected value: {expectedStringAfterSecondEncoding}\nLenth of text: {expectedStringAfterSecondEncoding.Length}\n\nReturned value: {resultWithUpperPhrase}\nLenth of text: {resultWithUpperPhrase.Length}");
         }
+
+        // ToDo
+        // 1) Make an decoding/encoding test without alphabet characters
+        // 2) Make an decoding/encoding test with multiline text
     }
 }

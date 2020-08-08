@@ -22,6 +22,7 @@ namespace CourseProject
                 openFileDialog.Filter = "Text files (*.txt)|*.txt";
                 if (openFileDialog.ShowDialog() == true)
                 {
+                    // Trying to get data from files two ways (ANSI and UTF)
                     var text = File.ReadAllText(openFileDialog.FileName);
                     if (text.Contains("�"))
                         text = File.ReadAllText(openFileDialog.FileName, Encoding.GetEncoding(1251));
@@ -44,6 +45,7 @@ namespace CourseProject
                 openFileDialog.Filter = "Text files (*.txt)|*.txt";
                 if (openFileDialog.ShowDialog() == true)
                 {
+                    // Trying to get data from files two ways (ANSI and UTF)
                     var text = File.ReadAllText(openFileDialog.FileName);
                     if (text.Contains("�"))
                         text = File.ReadAllText(openFileDialog.FileName, Encoding.GetEncoding(1251));

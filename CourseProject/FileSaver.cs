@@ -13,10 +13,11 @@ namespace CourseProject
             {
                 if (text.Trim().Length == 0)
                 {
-                    MessageBox.Show("You have chosen to keep an empty file.Well, this is the choice of a real samurai.");
+                    MessageBox.Show("You have chosen to keep an empty file. Well, this is the choice of a real samurai.");
                 }
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
 
+                // Add filters for using only .txt files
                 saveFileDialog.Filter = "txt files (*.txt)|*.txt";
                 saveFileDialog.FilterIndex = 1;
                 saveFileDialog.RestoreDirectory = true;
@@ -30,6 +31,7 @@ namespace CourseProject
             }
             catch (Exception ex)
             {
+                // Like writing logs xD
                 Console.WriteLine(ex);
                 return false;
             }
