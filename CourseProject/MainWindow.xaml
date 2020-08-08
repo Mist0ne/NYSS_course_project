@@ -1,0 +1,30 @@
+﻿<Window x:Class="CourseProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button HorizontalAlignment="Left" Margin="673,18,0,0" VerticalAlignment="Top" Width="109" Click="ChoseNewEncryptedFile" Height="51">
+            <TextBlock Text="Add new encrypted file" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="673,78,0,0" VerticalAlignment="Top" Width="109" Click="ChoseNewDecryptedFile" Height="51">
+            <TextBlock Text="Add new decrypted file" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+        </Button>
+        <TextBox x:Name="decryptedText" HorizontalAlignment="Left" Height="370" Margin="10,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341"/>
+        <Label Content="Decrypted text" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.426,1.474" Height="24" Width="341" Margin="10,10,0,0"/>
+        <TextBox x:Name="encryptedText" HorizontalAlignment="Left" Height="380" Margin="356,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312"/>
+        <Label Content="Encrypted text" HorizontalAlignment="Left" Margin="356,10,0,0" VerticalAlignment="Top" Width="312"/>
+        <Button Content="Save encrypted text" HorizontalAlignment="Left" Margin="673,296,0,0" VerticalAlignment="Top" Width="109" Height="47" Click="SaveEncryptedText"/>
+        <Button Content="Save decrypted text" HorizontalAlignment="Left" Margin="673,353,0,0" VerticalAlignment="Top" Width="109" Height="49" Click="SaveDecryptedText"/>
+        <TextBox x:Name="codePhrase" HorizontalAlignment="Left" Height="23" Margin="673,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Text="скорпион" FontSize="16"/>
+        <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" HorizontalAlignment="Left" Margin="673,136,0,0" VerticalAlignment="Top" Width="109" Height="36">
+            Enter your code phrase
+        </TextBlock>
+        <Button Content="Encrypt" HorizontalAlignment="Left" Margin="673,209,0,0" VerticalAlignment="Top" Width="109" Height="35" Click="EncryptText"/>
+        <Button Content="Decrypt" HorizontalAlignment="Left" Margin="673,249,0,0" VerticalAlignment="Top" Width="109" Height="36" Click="DecryptText"/>
+
+    </Grid>
+</Window>
